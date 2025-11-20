@@ -1,0 +1,223 @@
+
+.why-choose-container {
+  background: #f8fafc;
+
+
+  padding:  50px 5%;
+
+}
+
+
+.wc-head-section {
+  max-width: 650px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.wc-head-section h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.highlight {
+  color:#00bfff;
+}
+
+.wc-head-section p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
+.why-choose-cards-grid {
+   
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  justify-items: center;
+}
+
+.wc-card {
+     position: relative;
+  background-color:white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px var(--card-shadow);
+  padding: 24px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.wc-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.wc-icon-box {
+  background-color: #EE8100;
+  color:white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.wc-card:hover .wc-icon-box{
+    transform: rotate(10deg);
+}
+.wc-bottom-line{
+     position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #ff9a00, #ee8100, #c76a00);
+  border-radius: 0 0 8px 8px;
+  transition: width 0.5s ease;
+}
+.wc-card:hover .wc-bottom-line{
+    width: 100%;
+}
+
+.wc-card-title {
+    
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+
+.wc-card-desc {
+    flex: 1;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+
+.wc-points-grid {
+    
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px 8px;
+}
+
+
+.wc-point {
+background-color:#F3f2f7;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color:212121;
+  /* color: black; */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.wc-check-icon {
+  stroke-width: 3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 990px) {
+  .why-choose-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wc-head-section h2 {
+    font-size: 2.1rem;
+  }
+
+  .why-choose-container {
+    padding: 55px 20px;
+  }
+
+  .wc-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .wc-card-desc {
+    font-size: 0.92rem;
+  }
+
+  .wc-point {
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .why-choose-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wc-head-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .wc-head-section p {
+    font-size: 1rem;
+  }
+
+  .wc-card {
+    padding: 18px;
+  }
+
+  .wc-card-title {
+    font-size: 1.15rem;
+  }
+
+  .wc-card-desc {
+    font-size: 0.9rem;
+  }
+
+  .wc-icon-box {
+    width: 38px;
+    height: 38px;
+  }
+
+  .wc-point {
+    font-size: 10.5px;
+  }
+}
+
+/* Extra Small Devices (360px ↓) */
+@media (max-width: 360px) {
+  .wc-head-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .wc-card {
+    padding: 16px;
+  }
+
+  .wc-card-title {
+    font-size: 1.05rem;
+  }
+
+  .wc-card-desc {
+    font-size: 0.85rem;
+  }
+
+  .wc-point {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+}
+
