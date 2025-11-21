@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
-// import autmo from "../../assets/autmo.jpg"  
 import intro from "../../assets/intro1.mp4"
-
+import autmo from "../../assets/autmo.jpg"
+import services from "../../assets/services-bg.jpg"
+import product from "../../assets/product-development.jpg"
+import prototype from "../../assets/prototyping.jpg"
 
 const Hero = () => {
  const handlescroll=(targetId)=>{
@@ -13,12 +15,38 @@ const Hero = () => {
  
  
 }
+const images=[
+ {
+         
+          image:autmo
+        },
+        {
+          
+          image:services
+        },
+        {
+          
+          image:product
+        },
+        {
+         
+          image:prototype
+
+        }
+]
+const [current,setCurrent]=useState(0)
+useEffect(()=>{
+  const interval=setInterval(()=>{
+    setCurrent((prev)=>(prev+1) % images.length)
+  },4000)
+  return ()=>clearInterval(interval)
+},[])
 
   return (
     <>
       {/* <section className="hero" id="home" style={{ backgroundVideo: `url(${intro})` }}> */}
       <section className="hero" id="home">
-              <video
+              {/* <video
     src={intro}
     autoPlay
     muted
@@ -32,7 +60,16 @@ const Hero = () => {
       objectFit: "cover",
       transform: "translate(-50%, -50%)"
     }}
-  ></video>
+  ></video> */}
+              {
+                images.map((img,index)=>(
+                  <div key={index}
+                  className={`slide ${index === current ? "active": ""}`}
+                  style={{backgroundImage:`url(${img.image})`}}>
+
+                  </div>
+                ))
+              }
         
         <div className="overlay">
           <div className="hero-content">
