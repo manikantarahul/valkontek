@@ -22,7 +22,7 @@ const transporter = nodeMailer.createTransport({
 app.post("/contact", (req, res) => {
     const { fullName, email, phone, company, serviceInterest, message } = req.body
     const mailoption = {
-        from: `"${fullName}" <kartikcarthik@gmail.com>`,
+        from: `${fullName} <kartikcarthik@gmail.com>`,
         to: "kartikcarthik@gmail.com",
         replyTo: email,
         headers: {
