@@ -1,0 +1,112 @@
+.modal-image-wrapper img {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  object-fit: contain;
+
+}
+
+.section-heading {
+  border-left: 4px solid #EE8100;
+  padding-left: 10px;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.badge.bg-primary-subtle {
+  background: rgba(0, 191, 255, 0.1);
+}
+
+.modal-button {
+  color: #0d1b2a;
+}
+
+.modal-button:hover {
+  color: white;
+  border: 2px solid #EE8100;
+  background-color: #EE8100;
+}
+
+.card-list {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.card-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #EE8100;
+  border-radius: 50%;
+  margin-top: 11px;
+  flex-shrink: 0;
+}
+
+.point-text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .modal-image-wrapper img {
+    height: 220px;
+  }
+
+  .section-heading {
+    font-size: 1.15rem;
+  }
+
+  .point-text {
+    font-size: 0.9rem;
+  }
+
+  .modal-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .modal-image-wrapper img {
+    height: 200px;
+  }
+
+  .section-heading {
+    font-size: 1.1rem;
+  }
+
+  .point-text {
+    font-size: 0.87rem;
+  }
+
+  .card-list li {
+    gap: 8px;
+  }
+}
+
+/* Extra Small Devices (360px ↓) */
+@media (max-width: 360px) {
+  .modal-image-wrapper img {
+    height: 180px;
+  }
+
+  .section-heading {
+    font-size: 1rem;
+  }
+
+  .point-text {
+    font-size: 0.82rem;
+  }
+}

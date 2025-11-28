@@ -1,0 +1,186 @@
+
+.about-section {
+  position: relative;
+  padding: 70px 20px;
+  overflow: hidden;
+   background-color: #f8f9fc;
+  
+}
+
+
+/* Container */
+.about-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 20px;
+}
+
+
+.about-header p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Value cards grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding:0 20px;
+  margin-bottom: 60px;
+ 
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 28px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icon-box {
+  width: 55px;
+  height: 55px;
+  background: #EE8100;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #002b5b;
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Stats section */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  /* background: linear-gradient(145deg, #eaf6ff, #f9fbff); */
+  background-color: #27354A;
+  
+  border-radius: 18px;
+  padding: 50px 30px;
+  text-align: center;
+  border: 1px solid #cde7ff;
+}
+
+.stat-item h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color:#EE8100;
+  margin-bottom: 10px;
+}
+
+.stat-title {
+  font-size: 1.1rem;
+  /* color: black; */
+  color: white;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.stat-desc {
+  font-size: 0.9rem;
+  /* color: #555; */
+  color: white;
+  line-height: 1.4;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .about-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 15px;
+  }
+
+  .about-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .values-grid {
+    gap: 20px;
+  }
+
+  .value-card {
+    text-align: center;
+  }
+
+  .icon-box {
+    margin: 0 auto 12px;
+  }
+
+  .stats-container {
+    padding: 40px 20px;
+  }
+
+  .stat-item h4 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-header p {
+    font-size: 0.9rem;
+  }
+
+  .value-card {
+    padding: 20px;
+  }
+
+  .stats-container {
+    gap: 20px;
+    padding: 30px 15px;
+  }
+}
+
+

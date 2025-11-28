@@ -1,0 +1,207 @@
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.slidee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slidee.active {
+  opacity: 1;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: left;
+}
+
+.hero-title {
+  font-family: "Sans-serif";
+  font-size: 3rem;
+  font-weight: 700;
+  color: #EE8100;
+  margin-top: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-box:hover {
+  transform: scale(1.2);
+  transition: transform 1s ease;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.35);
+  padding: 20px 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  flex: 1 1 100px;
+  min-width: 130px;
+
+}
+
+.stat-box h2 {
+  color: #EE8100;
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 2px solid #EE8100;
+  border-radius: 30px;
+  padding: 10px 25px;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #EE8100;
+  color: white;
+}
+
+.btn.primary:hover {
+  border: 2px solid #EE8100;
+  background-color: transparent;
+  color: white;
+}
+
+.btn:hover {
+  background: #EE8100;
+  color: white;
+}
+
+
+
+
+/* ✅ Tablets and small laptops */
+@media (max-width: 1024px) {
+  .overlay {
+    padding: 100px 60px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .stats {
+    gap: 25px;
+  }
+}
+
+/* ✅ Mobile devices */
+@media (max-width: 768px) {
+  .overlay {
+    padding: 100px 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .features-section {
+    padding: 60px 30px;
+  }
+
+  .feature-card {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ✅ Very small screens */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box {
+    width: 80%;
+  }
+}
