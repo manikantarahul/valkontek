@@ -32,7 +32,7 @@ app.post("/contact", (req, res) => {
             from: email,
             to: "kartikcarthik@gmail.com"
         },
-        subject: `"Inquiry from ":${serviceInterest || 'General Inquiry'}`,
+        subject: `Inquiry from :${serviceInterest || 'General Inquiry'}`,
         html: `
         <h2>New Contact Message</h2>
         <p>Full Name: ${fullName}</p>
