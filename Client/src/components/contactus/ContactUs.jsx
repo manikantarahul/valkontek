@@ -44,7 +44,7 @@ export default function GetInTouch() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:2020/contact", formData).then((res) => {
+    axios.post("https://valkontekbackend.onrender.com/contact", formData).then((res) => {
       console.log(res)
       if (res.data.success) {
         toast("Mail Sent successfully", {
