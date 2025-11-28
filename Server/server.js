@@ -3,7 +3,12 @@ const cors = require("cors")
 const nodeMailer = require("nodemailer")
 const app = express()
 const port = process.env.PORT || 2020
-app.use(cors())
+app.use(cors({
+    origin: "https://valkontek.netlify.app",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"]
+}))
+app.options("*", cors());
 app.use(express.json())
 const transporter = nodeMailer.createTransport({
     service: "gmail",
