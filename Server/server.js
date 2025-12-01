@@ -1,6 +1,8 @@
 const express = require("express")
 const cors = require("cors")
 const sgMail = require("@sendgrid/mail");
+import dotenv from "dotenv";
+dotenv.config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const app = express()
 const port = process.env.PORT || 2020
@@ -22,16 +24,16 @@ app.use(express.json())
 app.post("/contact", async (req, res) => {
     const { fullName, email, phone, company, serviceInterest, message } = req.body
     const mailoption = {
-        from: `${fullName} <kartikcarthik@gmail.com>`,
-        to: "kartikcarthik@gmail.com",
+        from: process.env.FROM_EMAIL,
+        to: process.env.SENDER_EMAIL,
         replyTo: email,
         headers: {
             "Reply-To": email
         },
-        envelope: {
-            from: email,
-            to: "kartikcarthik@gmail.com"
-        },
+        // envelope: {
+        //     from: email,
+        //     to: "kartikcarthik@gmail.com"
+        // },
         subject: `Inquiry from :${serviceInterest || 'General Inquiry'}`,
         html: `
         <h2>New Contact Message</h2>
