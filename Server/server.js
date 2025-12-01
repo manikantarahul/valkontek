@@ -27,9 +27,9 @@ app.post("/contact", async (req, res) => {
         from: process.env.FROM_EMAIL,
         to: process.env.SENDER_EMAIL,
         replyTo: email,
-        headers: {
-            "Reply-To": email
-        },
+        // headers: {
+        //     "Reply-To": email
+        // },
         // envelope: {
         //     from: email,
         //     to: "kartikcarthik@gmail.com"
