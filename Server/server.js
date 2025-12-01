@@ -26,7 +26,7 @@ app.post("/contact", async (req, res) => {
     const mailoption = {
         from: process.env.FROM_EMAIL,
         to: process.env.SENDER_EMAIL,
-        replyTo: email,
+        reply_to: email,
         // headers: {
         //     "Reply-To": email
         // },
@@ -56,7 +56,8 @@ app.post("/contact", async (req, res) => {
         await sgMail.send(mailoption);
         res.status(200).json({ success: true });
     } catch (err) {
-        console.log(err);
+        // console.log(err);
+        console.error("SENDGRID ERROR DETAILS:", err.response?.body?.errors);
         res.status(500).json({ success: false });
     }
 })
