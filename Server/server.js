@@ -24,8 +24,10 @@ app.use(express.json())
 app.post("/contact", async (req, res) => {
     const { fullName, email, phone, company, serviceInterest, message } = req.body
     const mailoption = {
-        from: process.env.FROM_EMAIL,
-        to: process.env.SENDER_EMAIL,
+        from: {
+            email: process.env.SENDER_EMAIL
+        },
+        to: process.env.RECEIVER_EMAIL,
         reply_to: email,
         // headers: {
         //     "Reply-To": email
